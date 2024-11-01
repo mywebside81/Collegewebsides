@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #e0ffff, #ff69b4);
+    min-height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: linear-gradient(to right, #00ffff, #ff69b4);
+    color: white;
+    text-align: center;
+    padding: 10px; /* Adjust padding as needed */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures header stays on top of other content */
+}
+
+
+
+.back-button {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7); /* Darker background for better visibility */
+    border: none;
+    color: white;
+    padding: 12px; /* Slightly larger padding */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: background 0.3s, transform 0.3s; /* Smooth transitions for hover effects */
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.5); /* Lighter background on hover */
+    transform: translateY(-50%) scale(1.05); /* Slightly larger on hover */
+}
+
+.back-button:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* Custom focus ring */
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 90px 10px 30px;
+    gap: 30px;
+}
+
+.image-box {
+    background-color: #BE8ABF;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 40%;
+}
+
+.image-box img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+#image-display {
+    text-align: center;
+    margin-top: 20px;
+}
+.image-container {
+    display: flex;
+    gap: 20px; /* Space between image boxes */
+}
+
+.image-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 150px; /* Adjust as needed */
+    position: relative;
+}
+
+.image-box.expanded {
+    transform: scale(1.1); /* Slightly enlarge when expanded */
+}
+
+.contact-info {
+    display: none; /* Hide by default */
+    margin-top: 10px;
+}
+
+.image-box.expanded .contact-info {
+    display: block; /* Show when expanded */
+}
+* {
+  text-decoration: none;
+}
+
+#roll-image {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px;
+}
+
+.info-bar {
+  position: relative; /* Ensure parent has relative positioning */
+    background-color: #FEA5AD;
+    margin: 10px 20px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    height: 50px; /* Initial height */
+}
+.right-number {
+    font-size: 1.2em;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #333;
+    margin-left: auto;
+}
+
+.info-bar.expanded .right-number {
+    display: none; /* Hide when info-bar has the 'expanded' class */
+}
+.info-bar.expanded {
+    height: 130px; /* Reduced height when expanded */
+    padding: 15px; /* Additional padding when expanded */
+}
+
+.info-bar.expanded {
+    height: 100px; /* Height when expanded */
+    padding: 20px; /* Additional padding when expanded */
+}
+
+.info-bar img {
+    width: 60px; /* Base image size */
+    height: 60px; /* Base image size */
+    border-radius: 50%; /* Circular shape when collapsed */
+    margin-right: 10px;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.info-bar.expanded img {
+    width: 80px; /* Larger image size when expanded */
+    height: 80px; /* Larger image size when expanded */
+    border-radius: 15px; /* Rounded corners when expanded */
+}
+
+.info-text {
+    display: none; /* Hide text initially */
+    margin-left: 0px; /* Space between image and text */
+}
+
+.info-bar.expanded .info-text {
+    display: block; /* Show text when expanded */
+}
+
+.info-bar.expanded h3 {
+    font-size: 1.5em; /* Increase font size of the title */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.info-bar.expanded .additional-info {
+    font-size: 1.2em; /* Increase font size of additional info */
+    margin: 5px 0; /* Margin for spacing */
+}
+.info-bar h3 {
+    font-size: 1.2em; /* Increase font size for the title in normal state */
+    margin: 0; /* Remove margin for better alignment */
+}
+
+.info-bar .additional-info {
+    font-size: 1em; /* Increase font size for additional info in normal state */
+    margin: 0; /* Remove margin for better alignment */
+}
+.phone-link {
+    text-decoration: none; /* Removes the underline */
+    color: inherit;       /* Inherits the color from the parent element */
+}
+
+.phone-link:hover {
+    color: blue;          /* Change color on hover if desired */
+}
+
+.plus-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    font-size: 48px; /* Adjust size as needed */
+    color: black; /* Color of the + icon */
+    font-weight: bold;
+    background-color: transparent;
+
+    /* Move slightly to the right */
+    transform: translateX(100px); /* Adjust the value as needed */
+}
