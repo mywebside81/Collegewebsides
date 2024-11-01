@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark</title>
+    <style>
+        /* Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Heading Styles */
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        /* Image Container Styles */
+        #imageContainer {
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            max-width: 500px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Image Styles */
+        #studentImage {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+
+        /* Hover Effect */
+        #studentImage:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Mark</h1>
+    <div id="imageContainer">
+        <img id="studentImage" src="" alt="Student Mark">
+    </div>
+
+    <!-- Updated Script Block -->
+    <script>
+        // Function to get the query parameter
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Get the image parameter from the URL
+        const imageName = getQueryParameter('img');
+
+        // Debugging: Log the imageName to the console
+        console.log("Image Name from URL:", imageName);
+
+        // Set the image source if it exists
+        if (imageName) {
+            document.getElementById('studentImage').src = imageName;
+        } else {
+            document.getElementById('studentImage').alt = "No image found";
+        }
+    </script>
+
+</body>
+</html>
